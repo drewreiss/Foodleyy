@@ -1,0 +1,38 @@
+<div class="page-header">
+    <h1>Restaurant List</h1>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+    <label>Search Restaurant Database:
+        <input type="text" placeholder="Enter Restaurant" ng-model="query">
+    </label>
+
+    <label>Sort By:
+        <select ng-model="orderProp">
+            <option value="-rating">Rating (highest to lowest)</option>
+            <option value="rating">Rating (lowest to highest)</option>
+            <option value="title">Alphabetical</option>
+            <option value="cuisine">Cuisine</option>
+        </select>
+    </label>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12"><hr>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="restaurant in restaurants | filter:query | orderBy:orderProp">
+                <a href="#/restaurants/{{restaurant.id}}"><h5><span ng-bind="restaurant.title"></span></h5></a>
+                <p>Cuisine: <span ng-bind="restaurant.cuisine"></span></p>
+                <p>Rating: <span ng-bind="restaurant.rating"></span></p>
+            </li>
+        </ul>
+    </div>
+</div>

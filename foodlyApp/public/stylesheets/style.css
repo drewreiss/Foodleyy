@@ -1,0 +1,26 @@
+body { padding-top: 50px; 
+}
+.result-table {
+  margin: 20px 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+.result-table td { padding: 8px; }
+.result-table > tbody > tr > td:first-child {
+  width: 25%;
+  max-width: 300px;
+  text-align: right;
+}
+.result-table td table {
+  background-color: lightblue;
+  text-align: right;
+}
+.top-buffer {
+	margin-top: 15px;
+}
+#map-canvas {
+    height: 400px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}

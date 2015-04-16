@@ -1,0 +1,26 @@
+doctype html
+html(lang='en', ng-app='foodlyApp')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+        title= title
+        link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js')
+        script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular-resource.min.js')
+        script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAzANX6sjL401xyti0f0UTHMki-DtRSRFY')
+        script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places')
+        script(src='//rawgithub.com/GoDisco/ngFacebook/master/ngFacebook.js')
+        script(src='./javascripts/app.js')
+        script(src='./javascripts/controllers.js')
+        script(src='./javascripts/script.js')
+    body
+        nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+            div.navbar-header
+            a.navbar-brand(href='#/home')= title
+            a.navbar-brand(href='#/restaurants') List all Restaurants
+        div.container
+            div(ng-view)
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
+        
